@@ -20,7 +20,12 @@ public class App
     }
     public static void displayTitle(){
     	
-    	System.out.println(driver.getTitle());
+    	String title = driver.getTitle();
+    	System.out.println(title);
+    	changeCase(title);
     	
+    }
+    public static void changeCase(String t){
+    	System.out.println(t.toUpperCase());
     }
 }
