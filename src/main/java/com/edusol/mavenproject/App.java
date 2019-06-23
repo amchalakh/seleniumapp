@@ -9,11 +9,18 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class App 
 {
+	public static WebDriver driver;
     public static void main( String[] args )
     {
     	System.setProperty("webdriver.gecko.driver","E:\\Softwares\\jars\\Selenium Jars\\geckodriver.exe");
-    	WebDriver driver = new FirefoxDriver();
+    	driver = new FirefoxDriver();
     	driver.get("http://gmail.com");
-        System.out.println( "Hello World!" );
+    	displayTitle();
+       
+    }
+    public static void displayTitle(){
+    	
+    	System.out.println(driver.getTitle());
+    	
     }
 }
